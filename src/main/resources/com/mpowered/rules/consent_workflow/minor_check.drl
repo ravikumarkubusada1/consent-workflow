@@ -1,4 +1,4 @@
-package rules.consent.workflow.add_individual;
+package com.mpowered.rules.consent_workflow;
 
 import java.time.Duration;
 import java.time.Instant;
