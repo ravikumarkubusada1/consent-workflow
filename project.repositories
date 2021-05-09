@@ -27,14 +27,6 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>01-mpoweredhealth-snapshots</id>
-        <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-snapshot</url>
-        <source>SETTINGS</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
         <id>central</id>
         <url>https://repo.maven.apache.org/maven2</url>
         <source>PROJECT</source>
@@ -45,6 +37,14 @@
       <metadata>
         <id>02-maven-central</id>
         <url>http://repo1.maven.org/maven2</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>01-mpoweredhealth-snapshots</id>
+        <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-snapshot</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
