@@ -92,6 +92,7 @@
               <name>Description</name>
               <type>OTHER</type>
             </expressionIdentifier>
+            <rawValue class="string">check_minor</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
