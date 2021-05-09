@@ -45,6 +45,11 @@
       <version>1.4.15</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.mpowered</groupId>
+      <artifactId>mpowered-health-common-dto</artifactId>
+      <version>1.0.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
