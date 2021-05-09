@@ -1,2 +1,20 @@
 package com.mpowered.rules.consent_workflow;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Date;
+
+import com.mpowered.commons.pojo.userpojo.MinorUserPojo;
+
+function int ageInDays(Date birthDate) {
+    return Duration.between(Instant.ofEpochMilli(birthDate.getTime()), Instant.now()).toDays();
+}
+
+rule "is_minor.minor"
+when 
+    $minor: MinorUserPojo(ageInDays(birthDate) < (365 * 13))
+then
+    modify( $minor ) {
+        setConsentRequired(true)
+    }
+end
