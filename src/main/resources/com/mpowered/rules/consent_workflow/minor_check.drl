@@ -6,13 +6,14 @@ import java.util.Date;
 
 import com.mpowered.commons.pojo.userpojo.MinorUserPojo;
 
-function int ageInDays(Date birthDate) {
-    return Duration.between(Instant.ofEpochMilli(birthDate.getTime()), Instant.now()).toDays();
+function boolean ageInDays(Date birthDate) {
+    return Duration.between(Instant.ofEpochMilli(birthDate.getTime()), Instant.now()).toDays() < (365 * 13);
 }
 
 rule "is_minor.minor"
 when 
-    $minor: MinorUserPojo(ageInDays(birthDate) < (365 * 13))
+    $minor: MinorUserPojo()
+    eval(ageInDays($minor.getBirthDate()))
 then
     modify( $minor ) {
         setConsentRequired(true)
