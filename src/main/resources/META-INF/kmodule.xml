@@ -1,4 +1,6 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <kbase name="default" default="true" eventProcessingMode="stream" equalsBehavior="identity"/>
-  <kbase name="consent.workflow.add_individual" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="rules.consent.workflow.add_individual, com.mpowered.rules.consent_workflow"/>
+  <kbase name="consent.workflow.add_individual" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="rules.consent.workflow.add_individual, com.mpowered.rules.consent_workflow">
+    <ksession name="default" type="stateless" default="true" clockType="realtime"/>
+  </kbase>
 </kmodule>
