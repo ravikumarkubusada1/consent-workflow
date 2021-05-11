@@ -6,14 +6,14 @@ import java.util.Date;
 
 import com.mpowered.commons.pojo.userpojo.MinorUserPojo;
 
-function boolean nonMinor(Date birthDate) {
+function boolean requiredConsent(Date birthDate) {
     return Duration.between(Instant.ofEpochMilli(birthDate.getTime()), Instant.now()).toDays() > 4745;
 }
 
-rule "is_minor.minor"
+rule "is_minor.consent_check"
 when 
     $minor: MinorUserPojo( consentRequired == false )
-    eval(nonMinor($minor.getBirthDate()))
+    eval(requiredConsent($minor.getBirthDate()))
 then
     modify( $minor ) {
         setConsentRequired(true)
