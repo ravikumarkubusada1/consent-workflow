@@ -2,5 +2,6 @@
   <kbase name="default" default="true" eventProcessingMode="stream" equalsBehavior="identity"/>
   <kbase name="consent.workflow.add_individual" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="rules.consent.workflow.add_individual, com.mpowered.rules.consent_workflow">
     <ksession name="default" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="test" type="stateful" default="false" clockType="realtime"/>
   </kbase>
 </kmodule>
