@@ -1,2 +1,22 @@
 package rules.consent.workflow.add_individual;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Date;
+
+import com.mpowered.commons.pojo.userpojo.MinorUserPojo;
+
+function boolean requiredConsent(Date birthDate) {
+    return Duration.between(Instant.ofEpochMilli(birthDate.getTime()), Instant.now()).toDays() > 4745;
+}
+
+rule "is_minor.consent_check"
+when 
+    $minor: MinorUserPojo( consentRequired == false )
+    eval(requiredConsent($minor.getBirthDate()))
+then
+    modify( $minor ) {
+        setConsentRequired(true)
+    }
+end
+
