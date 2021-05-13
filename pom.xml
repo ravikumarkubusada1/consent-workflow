@@ -8,6 +8,18 @@
   <packaging>kjar</packaging>
   <name>consent-workflow</name>
   <description>Consent workflow related rules</description>
+  <distributionManagement>
+    <repository>
+      <id>01-mpoweredhealth-central</id>
+      <name>mpoweredhealth-artifactory-primary-0-release</name>
+      <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>01-mpoweredhealth-snapshots</id>
+      <name>mpoweredhealth-artifactory-primary-0-snapshots</name>
+      <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.kie</groupId>
