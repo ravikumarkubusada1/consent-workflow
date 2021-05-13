@@ -27,8 +27,16 @@
     <repository>
       <include>true</include>
       <metadata>
+        <id>01-mpoweredhealth-central</id>
+        <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-release</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
         <id>02-maven-central</id>
-        <url>https://repo.maven.apache.org/maven2</url>
+        <url>http://repo1.maven.org/maven2</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
@@ -43,16 +51,8 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>01-mpoweredhealth-central</id>
-        <url>https://mpoweredhealth.jfrog.io/mpoweredhealth/libs-release</url>
-        <source>SETTINGS</source>
-      </metadata>
-    </repository>
-    <repository>
-      <include>true</include>
-      <metadata>
         <id>02-maven-central</id>
-        <url>http://repo1.maven.org/maven2</url>
+        <url>https://repo.maven.apache.org/maven2</url>
         <source>SETTINGS</source>
       </metadata>
     </repository>
