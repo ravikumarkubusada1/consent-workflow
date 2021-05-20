@@ -12,7 +12,7 @@ function boolean requiredConsent(Date birthDate) {
 
 rule "is_minor.consent_check"
 when 
-    $minor: MinorUserPojo( consentRequired == false )
+    $minor: MinorUserPojo( consentRequired == false, state == "CA")
     eval(requiredConsent($minor.getBirthDate()))
 then
     modify( $minor ) {
